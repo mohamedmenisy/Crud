@@ -1,0 +1,119 @@
+body{
+    color: white;
+    overflow: hidden;
+}
+.line{
+    width: 50%;
+    height: 1px;
+    background-color: rgba(250, 250, 250, 0.5);
+   
+}
+.textarea{
+    height: 300px !important;
+}
+#products,#elproduct{
+    display: none ;
+}
+.btn:hover{
+    border: none !important;
+}
+.btn{
+    border: none !important;
+}
+svg{
+    position:absolute;
+    top: 0;
+    left: 0;
+    z-index: -555;
+}
+
+#home p{
+    font-size: 60px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.col-md-3 .iteeem{
+    border: 3px solid #f6f6f6;
+    transition: all 0.6s;
+    position: relative;
+    text-align: left !important;
+}
+
+.col-md-3 .iteeem:hover{
+    transform: translateY(-10px);
+    border: none;
+}
+.col-md-3 .iteeem::after{
+content: "";
+position: absolute;
+width: 3px;
+height: 0;
+bottom: 0;
+right: -3;
+background-color: #0099ff;
+transition: all 0.7s;
+}
+.col-md-3 .iteeem::before{
+content: "";
+position: absolute;
+width: 3px;
+height: 0;
+left: -3;
+top: 0;
+background-color: #0099ff;
+transition: all 0.7s;
+}
+
+.iteeem:hover::after{
+    height: 100%;
+}
+.iteeem:hover::before{
+    height: 100%;
+}
+.message{
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    padding: 30px;
+    background-color: #0099ff;
+    color: white;
+    font-weight: bold;
+   border-top-right-radius: 8px;
+   display: none;
+}
+@media (max-width:767px){
+    .message{
+        right: 0;
+        bottom: 0;
+        padding: 5px 20px;
+        font-size: 16px;
+        height: fit-content;
+        border-top-right-radius: 0;
+        text-align: center;
+        
+    }
+    .message::before{
+        animation: movebefore 2s linear  ;
+    }
+}
+.message::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    height:3px ;
+    width: 0;
+    left: 0;
+    animation: movebefore 2s linear  ;
+}
+@keyframes movebefore{
+    0%{
+        width: 0;
+    }
+    50%{
+        width: 50%;
+    }
+    100%{
+        width: 100%;
+    }
+}

@@ -1,0 +1,90 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Document</title>
+</head>
+<body class="bg-dark" id="particles-js">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,288L80,288C160,288,320,288,480,272C640,256,800,224,960,213.3C1120,203,1280,213,1360,218.7L1440,224L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
+    <section id="home">
+        <div  class=" min-vh-100 d-flex justify-content-center align-items-center">
+            <div class="text-center">
+                <p id="HomeClick" class="titlemove"></p>
+        </div>
+
+    </section>
+
+
+<section id="ProduInp">
+    <section id="ProduInp" class="d-flex min-vh-100 align-items-center justify-content-center">
+        <div class=" container w-75">
+            <input type="text" class="form-control my-3 py-2 mx-2" placeholder="Product Name" id="Pname">
+            <div class="message one" id="errname">
+                <p >First Letter Should be Capital</p>
+            </div>
+            <input type="number" class="form-control  my-3 py-2 mx-2" placeholder="Product Price" id="Pprice">
+            <div class="message two" id="errprice">
+                <p>Max Price 10000</p>
+            </div> 
+            <input type="text" class="form-control my-3 py-2 mx-2" placeholder="Product Category" id="Pcategory">
+            <div class="message threee" id="errCateg">
+                <p>First Letter Should be Capital</p>
+            </div> 
+
+            <div class="row g-2 justify-content-center">
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <button class="btn btn-warning mx-2 w-100  rounded  text-white" id="ShowProduct" >Show</button>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <button class="btn btn-info rounded mx-2 w-100 " id="addProduct" disabled>Add</button>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <button class="btn btn-success  rounded mx-2 w-100 " id="UpdateProduct" disabled>Update</button>
+                    </div>
+                </div>
+                
+            </div>
+
+
+
+
+           
+        </div>
+
+    </section>
+    
+    
+</section>
+   <section class="min-vh-100" id="elproduct" >
+    <div class="container" >
+        <div class="text-center">
+            <input type="text" class="form-control my-5 w-50 mx-auto" placeholder="Search By Name" id="searchInput">
+        </div>
+        <div class="row g-3 pb-5 mt-4" id="productRow">
+    
+        </div>
+        <div class="text-end">
+            <button class="btn btn-danger mx-2 rounded  text-white" id="addProductNow" >Add Product Now</button>
+        </div>
+    </div>
+   </section>    
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/typed.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
