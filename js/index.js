@@ -24,7 +24,9 @@ if(JSON.parse(localStorage.getItem('productlist'))!=null){
 
 
 addBtn.onclick=function(){
-   
+    productPrice.classList.remove('is-valid')
+    productCateg.classList.remove('is-valid')
+    productName.classList.remove('is-valid')
     
         addProduct()
         displayProduct()
@@ -104,8 +106,8 @@ searchInp.onkeyup=function(){
 }
 
 function getinfo(index){
-    $('#elproduct').hide(2000,()=>{
-        $('#ProduInp').fadeIn(2000)
+    $('#elproduct').fadeOut(1000,()=>{
+        $('#ProduInp').fadeIn(1000)
     })
     globalindex=index;
     UpdateProduct.removeAttribute('disabled') 
@@ -117,8 +119,8 @@ function getinfo(index){
 }
 
 UpdateProduct.onclick=function(){
-    $('#ProduInp').fadeOut(2000,()=>{
-        $('#elproduct').show(2000)
+    $('#ProduInp').fadeOut(1000,()=>{
+        $('#elproduct').fadeIn(1000)
     })
   
     update()
@@ -139,7 +141,7 @@ function update(){
 }
 
 
-productName.onblur=function(){
+productName.onchange=function(){
     let nameRejex=/^[A-Z][a-z1-9](.|\s)*$/;
     if(nameRejex.test(productName.value)){
         productName.classList.add('is-valid')
@@ -147,13 +149,13 @@ productName.onblur=function(){
     }else{
         productName.classList.add('is-invalid')
         productName.classList.remove('is-valid')
-        $('.one').fadeIn(2000,()=>{
-            $('.one').fadeOut(2000)
+        $('.one').fadeIn(3000,()=>{
+            $('.one').fadeOut(3000)
         })
     }
 }
 
-productPrice.onblur=function(){
+productPrice.onchange=function(){
     let nameRejex=/^[1-9][0-9][0-9]?[0-9]?$|10000$/;
     if(nameRejex.test(productPrice.value)){
         productPrice.classList.add('is-valid')
@@ -162,14 +164,14 @@ productPrice.onblur=function(){
     }else{
         productPrice.classList.add('is-invalid')
         productPrice.classList.remove('is-valid')
-        $('.two').fadeIn(2000,()=>{
-            $('.two').fadeOut(2000)
+        $('.two').fadeIn(3000,()=>{
+            $('.two').fadeOut(3000)
         })
     }
 }
 
 
-productCateg.onblur=function(){
+productCateg.onchange=function(){
     let nameRejex=/^[A-Z][a-z](.|\s)*$/;
     if(nameRejex.test(productCateg.value)){
         productCateg.classList.add('is-valid')
@@ -179,31 +181,25 @@ productCateg.onblur=function(){
     }else{
         productCateg.classList.add('is-invalid')
         productCateg.classList.remove('is-valid')
-        $('.threee').fadeIn(2000,()=>{
-            $('.threee').fadeOut(2000)
+        $('.threee').fadeIn(3000,()=>{
+            $('.threee').fadeOut(3000)
         })
     }
 }
 
 ShowProduct.onclick=function(){
-    $('#ProduInp').fadeOut(2000,()=>{
-        $('#elproduct').fadeIn(2000)
+    $('#ProduInp').fadeOut(1000,()=>{
+        $('#elproduct').fadeIn(1000)
     })
 }
 
 addProductNow.onclick=function(){
-    $('#elproduct').fadeOut(2000,()=>{
-        $('#ProduInp').fadeIn(2000)
+    $('#elproduct').fadeOut(1000,()=>{
+        $('#ProduInp').fadeIn(1000)
+        productPrice.classList.remove('is-valid')
+        productCateg.classList.remove('is-valid')
+        productName.classList.remove('is-valid')
     })
 }
 
 
-var typed = new Typed('.titlemove', {
-    strings: ['Click To Start'],
-    typeSpeed:80,
-    backSpeed:60,
-    loop: true,
-    loopCount: Infinity,
-    showCursor: false,
-    
-  });
